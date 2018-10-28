@@ -1,0 +1,14 @@
+AB00-0022-02AA-0000 kartında ve I2C 0x4F adresinde bulunmaktadır.
+Yazılımda Reseti sürmek için Beaglebone P8-39 SOM_I2C1_RST_L sinyali
+( Gpio no: 76 ) high sürülmektedir.
+	3V3_REG  voltajı,
+	3V3_OUT ve 3V3_REG arasında R501 üzerinden geçen akım değeri,
+	5V0_REG  voltajı,
+	5V0_OUT ve 5V0_REG arasında R502 üzerinden geçen akım değeri,
+	12V0_REG  voltajı,
+	12V0_OUT ve 12V0_REG arasında R503 üzerinden geçen akım değeri,
+	Besleme Voltajı,
+	Sıcaklık değeri,
+hesaplanmaktadır.	
+
+

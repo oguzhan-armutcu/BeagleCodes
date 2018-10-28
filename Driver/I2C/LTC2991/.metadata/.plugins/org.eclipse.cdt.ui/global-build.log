@@ -1,0 +1,267 @@
+09:10:02 **** Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/gpio-utils.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gpio-utils.d" -MT"src/gpio-utils.o" -o "src/gpio-utils.o" "../src/gpio-utils.c"
+../src/gpio-utils.c:7:24: fatal error: gpio-utils.h: No such file or directory
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/gpio-utils.o' failed
+make: *** [src/gpio-utils.o] Error 1
+09:10:25 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/gpio-utils.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gpio-utils.d" -MT"src/gpio-utils.o" -o "src/gpio-utils.o" "../src/gpio-utils.c"
+../src/gpio-utils.c:7:29: fatal error: /inc/gpio-utils.h: No such file or directory
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/gpio-utils.o' failed
+make: *** [src/gpio-utils.o] Error 1
+09:10:31 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/gpio-utils.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/gpio-utils.d" -MT"src/gpio-utils.o" -o "src/gpio-utils.o" "../src/gpio-utils.c"
+Finished building: ../src/gpio-utils.c
+ 
+Building file: ../src/ltc2991.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ltc2991.d" -MT"src/ltc2991.o" -o "src/ltc2991.o" "../src/ltc2991.c"
+../src/ltc2991.c:17:21: fatal error: ltc2991.h: No such file or directory
+compilation terminated.
+make: *** [src/ltc2991.o] Error 1
+src/subdir.mk:21: recipe for target 'src/ltc2991.o' failed
+09:10:42 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/ltc2991.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ltc2991.d" -MT"src/ltc2991.o" -o "src/ltc2991.o" "../src/ltc2991.c"
+../src/ltc2991.c:18:24: fatal error: gpio-utils.h: No such file or directory
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/ltc2991.o' failed
+make: *** [src/ltc2991.o] Error 1
+09:10:52 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/ltc2991.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ltc2991.d" -MT"src/ltc2991.o" -o "src/ltc2991.o" "../src/ltc2991.c"
+../src/ltc2991.c:33:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main (  )
+      ^
+../src/ltc2991.c: In function ‘main’:
+../src/ltc2991.c:49:2: warning: implicit declaration of function ‘usleep’ [-Wimplicit-function-declaration]
+  usleep(500);
+  ^
+../src/ltc2991.c:80:7: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+  if ( write(file, data, 2) != 2)
+       ^
+../src/ltc2991.c:86:2: warning: implicit declaration of function ‘sleep’ [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+../src/ltc2991.c:132:6: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+   if(read(file, data, 2) != 2)
+      ^
+../src/ltc2991.c: In function ‘pauseNanoSec’:
+../src/ltc2991.c:206:5: warning: implicit declaration of function ‘nanosleep’ [-Wimplicit-function-declaration]
+  if(nanosleep(&tmr1,&tmr2) < 0)
+     ^
+Finished building: ../src/ltc2991.c
+ 
+Building target: ltc2991
+Invoking: Cross GCC Linker
+arm-linux-gnueabihf-gcc  -o "ltc2991"  ./src/gpio-utils.o ./src/ltc2991.o   
+Finished building target: ltc2991
+ 
+09:10:54 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+09:17:00 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+09:39:38 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+09:55:33 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+09:55:37 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+09:56:23 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+09:57:35 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+09:58:15 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+10:11:32 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+10:35:51 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+10:36:30 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+10:37:46 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+10:38:13 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+10:45:21 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+10:45:26 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+17:12:08 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+11:20:43 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+11:36:16 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/ltc2991.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ltc2991.d" -MT"src/ltc2991.o" -o "src/ltc2991.o" "../src/ltc2991.c"
+../src/ltc2991.c:35:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main (  )
+      ^
+../src/ltc2991.c: In function ‘main’:
+../src/ltc2991.c:51:2: warning: implicit declaration of function ‘usleep’ [-Wimplicit-function-declaration]
+  usleep(500);
+  ^
+../src/ltc2991.c:82:7: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+  if ( write(file, data, 2) != 2)
+       ^
+../src/ltc2991.c:88:2: warning: implicit declaration of function ‘sleep’ [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+../src/ltc2991.c:134:6: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+   if(read(file, data, 2) != 2)
+      ^
+../src/ltc2991.c: In function ‘pauseNanoSec’:
+../src/ltc2991.c:216:5: warning: implicit declaration of function ‘nanosleep’ [-Wimplicit-function-declaration]
+  if(nanosleep(&tmr1,&tmr2) < 0)
+     ^
+Finished building: ../src/ltc2991.c
+ 
+Building target: ltc2991
+Invoking: Cross GCC Linker
+arm-linux-gnueabihf-gcc  -o "ltc2991"  ./src/gpio-utils.o ./src/ltc2991.o   
+Finished building target: ltc2991
+ 
+11:36:18 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+11:36:23 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+11:37:12 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/ltc2991.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ltc2991.d" -MT"src/ltc2991.o" -o "src/ltc2991.o" "../src/ltc2991.c"
+../src/ltc2991.c:35:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main (  )
+      ^
+../src/ltc2991.c: In function ‘main’:
+../src/ltc2991.c:51:2: warning: implicit declaration of function ‘usleep’ [-Wimplicit-function-declaration]
+  usleep(500);
+  ^
+../src/ltc2991.c:82:7: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+  if ( write(file, data, 2) != 2)
+       ^
+../src/ltc2991.c:88:2: warning: implicit declaration of function ‘sleep’ [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+../src/ltc2991.c:134:6: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+   if(read(file, data, 2) != 2)
+      ^
+../src/ltc2991.c: In function ‘pauseNanoSec’:
+../src/ltc2991.c:208:5: warning: implicit declaration of function ‘nanosleep’ [-Wimplicit-function-declaration]
+  if(nanosleep(&tmr1,&tmr2) < 0)
+     ^
+Finished building: ../src/ltc2991.c
+ 
+Building target: ltc2991
+Invoking: Cross GCC Linker
+arm-linux-gnueabihf-gcc  -o "ltc2991"  ./src/gpio-utils.o ./src/ltc2991.o   
+Finished building target: ltc2991
+ 
+11:37:18 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/ltc2991.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ltc2991.d" -MT"src/ltc2991.o" -o "src/ltc2991.o" "../src/ltc2991.c"
+../src/ltc2991.c:33:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main (  )
+      ^
+../src/ltc2991.c: In function ‘main’:
+../src/ltc2991.c:49:2: warning: implicit declaration of function ‘usleep’ [-Wimplicit-function-declaration]
+  usleep(500);
+  ^
+../src/ltc2991.c:80:7: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+  if ( write(file, data, 2) != 2)
+       ^
+../src/ltc2991.c:86:2: warning: implicit declaration of function ‘sleep’ [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+../src/ltc2991.c:132:6: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+   if(read(file, data, 2) != 2)
+      ^
+../src/ltc2991.c: In function ‘pauseNanoSec’:
+../src/ltc2991.c:206:5: warning: implicit declaration of function ‘nanosleep’ [-Wimplicit-function-declaration]
+  if(nanosleep(&tmr1,&tmr2) < 0)
+     ^
+Finished building: ../src/ltc2991.c
+ 
+Building target: ltc2991
+Invoking: Cross GCC Linker
+arm-linux-gnueabihf-gcc  -o "ltc2991"  ./src/gpio-utils.o ./src/ltc2991.o   
+Finished building target: ltc2991
+ 
+11:37:20 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+11:37:23 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
+15:25:10 **** Build of configuration Debug for project ltc2991 ****
+make all 
+Building file: ../src/ltc2991.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ltc2991.d" -MT"src/ltc2991.o" -o "src/ltc2991.o" "../src/ltc2991.c"
+../src/ltc2991.c:29:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main (  )
+      ^
+../src/ltc2991.c: In function ‘main’:
+../src/ltc2991.c:45:2: warning: implicit declaration of function ‘usleep’ [-Wimplicit-function-declaration]
+  usleep(500);
+  ^
+../src/ltc2991.c:76:7: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+  if ( write(file, data, 2) != 2)
+       ^
+../src/ltc2991.c:82:2: warning: implicit declaration of function ‘sleep’ [-Wimplicit-function-declaration]
+  sleep(1);
+  ^
+../src/ltc2991.c:128:6: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+   if(read(file, data, 2) != 2)
+      ^
+../src/ltc2991.c: In function ‘pauseNanoSec’:
+../src/ltc2991.c:203:5: warning: implicit declaration of function ‘nanosleep’ [-Wimplicit-function-declaration]
+  if(nanosleep(&tmr1,&tmr2) < 0)
+     ^
+Finished building: ../src/ltc2991.c
+ 
+Building target: ltc2991
+Invoking: Cross GCC Linker
+arm-linux-gnueabihf-gcc  -o "ltc2991"  ./src/gpio-utils.o ./src/ltc2991.o   
+Finished building target: ltc2991
+ 
+15:25:15 **** Incremental Build of configuration Debug for project ltc2991 ****
+make all 
+make: Nothing to be done for 'all'.
