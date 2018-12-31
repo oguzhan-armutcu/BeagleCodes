@@ -1,0 +1,68 @@
+/*
+ * 359x.h
+ *
+ *  Created on: Feb 12, 2016
+ *      Author: oguzhanarmutcu
+ */
+#ifndef SRC_359X_H_
+#define SRC_359X_H_
+
+#include "spi.h"
+
+
+/*
+ * VARIABLE DEFINES
+ */
+#define DATA_ACLK_1MHZ							0x00
+#define DATA_ACLK_2MHZ							0x08
+
+#define DATA_ACLK_12MHZ							0x18
+//HIZ = 0, TFLIP = 0, TMODE = 1, SELFTEST = 0, ODDEVEN = 0, TPARITY = 0, RATE = 0
+#define DATA_WRITE_TRANSMIT_CONTROL_REGISTER 	0x20
+#define DATA_WRITE_ARINC429_FIFO				0xAA55AA30
+
+//
+// SPI Opcode for HI-3593
+//
+#define OPCODE_MASTER_RESET     									0x04
+#define OPCODE_WRITE_TRANSMIT_CONTROL     							0x08
+#define OPCODE_WRITE_ARINC429_FIFO     								0x0C
+#define OPCODE_WRITE_RECEIVER1_CONTROL   							0x10
+#define OPCODE_WRITE_LABELVALUES_RECEIVER1    						0x14
+#define OPCODE_WRITE_PRIORITY_LABELVALUES_RECEIVER1    				0x18
+#define OPCODE_WRITE_RECEIVER2_CONTROL   							0x24
+#define OPCODE_WRITE_LABELVALUES_RECEIVER2    						0x28
+#define OPCODE_WRITE_PRIORITY_LABELVALUES_RECEIVER2     			0x2C
+#define OPCODE_WRITE_FLAG     										0x34
+#define OPCODE_WRITE_ACLK_DIV     									0x38
+#define OPCODE_TRANSMIT_CURRENT_CONSTENTS_FIFO     					0x40
+#define OPCODE_SOFTWARE_RESET     									0x44
+#define OPCODE_SET_ALLBITS_RECEIVER1_1    							0x48
+#define OPCODE_SET_ALLBITS_RECEIVER2_1								0x4C
+#define OPCODE_READ_TRANSMIT_STATUS   								0x80
+#define OPCODE_READ_TRANSMIT_CONTROL				   				0x84
+#define OPCODE_READ_RECEIVER1_STATUS    							0x90
+#define OPCODE_READ_RECEIVER1_CONTROL     							0x94
+#define OPCODE_READ_LABELVALUES_RECEIVER1     						0x98
+#define OPCODE_READ_PRIORITY_LABELVALUES_RECEIVER1    				0x9C
+#define OPCODE_READ_RECEIVER1_ARINC429_FIFO    						0xA0
+#define OPCODE_READ_RECEIVER1_PRIORITY_LABEL_REG1    				0xA4
+#define OPCODE_READ_RECEIVER1_PRIORITY_LABEL_REG2    				0xA8
+#define OPCODE_READ_RECEIVER1_PRIORITY_LABEL_REG3    				0xAC
+#define OPCODE_READ_RECEIVER2_STATUS    							0xB0
+#define OPCODE_READ_RECEIVER2_CONTROL  								0xB4
+#define OPCODE_READ_RECEIVER2_LABELVALUES_RECEIVER2	    			0xB8
+#define OPCODE_READ_RECEIVER2_PRIORITY_LABEL_MATCH_REG    			0xBC
+#define OPCODE_READ_RECEIVER2_ARINC429_FIFO    						0xC0
+#define OPCODE_READ_RECEIVER2_PRIORITY_LABEL_REG1    				0xC4
+#define OPCODE_READ_RECEIVER2_PRIORITY_LABEL_REG2    				0xC8
+#define OPCODE_READ_RECEIVER2_PRIORITY_LABEL_REG3    				0xCC
+#define OPCODE_READ_FLAG     										0xD0
+#define OPCODE_READ_ACLK_DIV										0xD4
+
+
+
+void GEN_3593_WriteRegNum_OneByte ( unsigned char opcode, unsigned char data, spi_t *spi );
+void GEN_3593_WriteRegNum_MultiBytes ( unsigned char opcode, unsigned long data, spi_t *spi );
+unsigned long GEN_3593_ReadRegNum_MultiBytes(unsigned char opcode, spi_t *spi);
+#endif /* SRC_613X_H_ */
