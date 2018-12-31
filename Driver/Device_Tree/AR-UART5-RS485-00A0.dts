@@ -1,0 +1,50 @@
+/*
+ *********************************************************
+ * @file       : AR-UART5-RS485-00A0.dts
+ * @author     : Oguzhan Armutcu
+ * @date       : 08 Feb 2018
+ * Description : This is the src file for UART5 485 device tree.
+ *
+ *********************************************************
+*/
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+	// identification
+	part-number = "AR-UART5-RS485";
+	version = "00A0";
+
+	// resources this cape uses
+	exclusive-use =
+		"P8.37",		// uart5_txd
+		"P8.31",		// uart5_rxd
+		"P8.32",		// uart5_rtsn
+
+		"uart5";		// hardware ip used
+
+	fragment@0 {
+		target = <&am33xx_pinmux>;
+		__overlay__ {
+			ar_uart5_pins: pinmux_ar_uart5_pins {
+				pinctrl-single,pins = <
+					0x0C0 0x04 /* lcd_data8.uart5_txd | MODE4 */
+					0x0D8 0x24 /* lcd_data14.uart5_rxd | MODE4 */
+                    0x0DC 0x06 /* lcd_data15.uart5_rtsn pulldown| MODE6 */
+				>;
+			};
+		};
+	};
+
+	fragment@1 {
+		target = <&uart5>;
+		__overlay__ {
+			status = "okay";
+			pinctrl-names = "default";
+			pinctrl-0 = <&ar_uart5_pins>;
+		};
+	};
+};
+

@@ -1,0 +1,49 @@
+/*
+ *********************************************************
+ * @file       : AR-UART4-RS485-00A0.dts
+ * @author     : Oguzhan Armutcu
+ * @date       : 08 Feb 2018
+ * Description : This is the src file for UART4 RS485 device tree.
+ *
+ *********************************************************
+*/
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+	// identification
+	part-number = "AR-UART4-RS485";
+	version = "00A0";
+
+	// resources this cape uses
+	exclusive-use =
+		"P9.13",		// uart4_txd
+		"P9.11",		// uart4_rxd
+		"P8.33",		// uart4_rtsn
+          
+		"uart4";		// hardware ip used
+
+	fragment@0 {
+		target = <&am33xx_pinmux>;
+		__overlay__ {
+			ar_uart4_pins: pinmux_ar_uart4_pins {
+				pinctrl-single,pins = <
+					0x074 0x06 /* gpmc_wpn.uart4_txd | MODE6 */
+					0x070 0x26 /* gpmc_wait0.uart4_rxd | MODE6 */
+                    0x0D4 0x06 /* PIN_OUTPUT_PULLDOWN | MUX_MODE6 (GPIO3_19) */
+				>;
+			};
+		};
+	};
+
+	fragment@1 {
+		target = <&uart4>;
+		__overlay__ {
+			status = "okay";
+			pinctrl-names = "default";
+			pinctrl-0 = <&ar_uart4_pins>;
+		};
+	};
+};
